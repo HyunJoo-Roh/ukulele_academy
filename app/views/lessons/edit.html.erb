@@ -1,6 +1,6 @@
-<h1>Editing lesson</h1>
+<h1>레슨 수정하기</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @lesson %> |
-<%= link_to 'Back', lessons_path %>
+<%= link_to 'Show', user_lesson_path(@user, @lesson) %>
+<%= link_to 'Back', user_lessons_path(@user) %>

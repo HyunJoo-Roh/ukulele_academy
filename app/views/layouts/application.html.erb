@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>UkuleleAcademy</title>
+  <title>씐나는 우쿠렐레렐교실~</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div class="span3" id="sidebar">
+    <ul class="nav nav-list bs-docs-sidenav nav-collapse collapse">
+      <li>
+        <%= link_to schedules_path do %>
+        <i class="icon-chevron-right"></i>홈
+        <% end %>
+      </li>
+      <li>
+        <%= link_to users_path do %>
+        <i class="icon-chevron-right"></i>학생 현황
+        <% end %>
+      </li>
+    </ul>
+  </div>
 
-<%= yield %>
+  <%= yield %>
 
 </body>
 </html>
