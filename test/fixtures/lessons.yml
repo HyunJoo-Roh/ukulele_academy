@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  lesson_date: 2014-03-26 18:17:18
+  turn: 1
+  goal: MyText
+  song: MyString
+  homework: MyString
+  user_id: 
+
+two:
+  lesson_date: 2014-03-26 18:17:18
+  turn: 1
+  goal: MyText
+  song: MyString
+  homework: MyString
+  user_id: 
