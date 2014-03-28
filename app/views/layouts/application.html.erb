@@ -7,22 +7,28 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div>
-    <ul>
-      <li>
-        <%= link_to schedules_path do %>
-        <i class=""></i>홈
-        <% end %>
-      </li>
-      <li>
-        <%= link_to users_path do %>
-        <i class=""></i>학생 현황
-        <% end %>
-      </li>
-    </ul>
-  </div>
-
+  <div class="row">
+    <div class="col-md-3">
+        <ul>
+            <li>
+              <%= link_to schedules_path do %>
+                <i class="icon-chevron-right"></i>스케줄
+              <% end %>
+            </li>
+            <li>
+              <%= link_to users_path do %>
+                <i class="icon-chevron-right"></i>학생 현황
+              <% end %>
+            </li>
+            <li>
+              <%= link_to root_path do %>
+                <i class="icon-chevron-right"></i>사이트 바로가기(홈)
+              <% end %>
+            </li>
+        </ul>
+    </div>
   <%= yield %>
 
+  </div>
 </body>
 </html>
