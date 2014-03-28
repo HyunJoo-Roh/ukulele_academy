@@ -11,6 +11,6 @@
  * file per style scope.
  *
  *= require_self
- *= require default
  *= require bootstrap
+ *= require default
  */

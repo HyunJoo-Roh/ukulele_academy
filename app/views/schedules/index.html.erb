@@ -1,58 +1,98 @@
-        <p>레슨 스케쥴 현황</p>
+        <h1>
+          레슨 스케쥴 현황
+        </h1>
 
-        <div class="monday">
-          <p>월요일</p>
+        <div class="weekday col-md-2 panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">월요일</h3>
+          </div>
+          <div class="panel-body">
           <% @monday.each do |monday| %>
-           <p><%= link_to monday.user.name, user_lessons_path(monday.user) %></p>
-           <p><%= monday.hour %></p>
-           <p><%= link_to '수정', edit_schedule_path(monday) %></p>
-           <p><%= link_to '삭제', monday, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+           <div class="panel panel-info">
+             <div class="panel panel-title">
+             <span ><%= monday.hour %></span>
+             <span class="glyphicon glyphicon-wrench"><%= link_to '', edit_schedule_path(monday) %></span>
+             <span class="glyphicon glyphicon-remove"><%= link_to '', monday, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+             </div>
+             <p>
+               <%= link_to monday.user.name, user_lessons_path(monday.user) %>
+             </p>
+           </div>
           <% end %>
+          </div>
         </div>
-        <div class="tuesday">
-          <p>화요일</p>
+        <div class="weekday col-md-2 panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">화요일</h3>
+          </div>
+          <div class="panel-body">
           <% @tuesday.each do |tuesday| %>
+          <div class="panel panel-info">
+            <div class="panel panel-title">
+             <span><%= tuesday.hour %></span>
+             <span class="glyphicon glyphicon-wrench"><%= link_to '', edit_schedule_path(tuesday) %></span>
+             <span class="glyphicon glyphicon-remove"><%= link_to '', tuesday, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+           </div>
            <p><%= link_to tuesday.user.name, user_lessons_path(tuesday.user) %></p>
-           <p><%= tuesday.hour %></p>
-           <p><%= link_to '수정', edit_schedule_path(tuesday) %></p>
-           <p><%= link_to '삭제', tuesday, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+           </div>
           <% end %>
+          </div>
         </div>
-        <div class="wednesday">
-          <p>수요일</p>
+        <div class="weekday col-md-2 panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">수요일</h3>
+          </div>
+          <div class="panel-body">
           <% @wednesday.each do |wednesday| %>
+          <div class="panel panel-info">
+            <div class="panel panel-title">
+             <span><%= wednesday.hour %></span>
+             <span class="glyphicon glyphicon-wrench"><%= link_to '', edit_schedule_path(wednesday) %></span>
+             <span class="glyphicon glyphicon-remove"><%= link_to '', wednesday, method: :delete, data: { confirm: 'Are you sure?' } %></span>
+            </div>
            <p><%= link_to wednesday.user.name, user_lessons_path(wednesday.user) %></p>
-           <p><%= wednesday.hour %></p>
-           <p><%= link_to '수정', edit_schedule_path(wednesday) %></p>
-           <p><%= link_to '삭제', wednesday, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+           </div>
           <% end %>
+          </div>
         </div>
-        <div class="thursday">
-          <p>목요일</p>
+        <div class="weekday col-md-2 panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">목요일</h3>
+          </div>
+          <div class="panel-body">
           <% @thursday.each do |thursday| %>
            <p><%= link_to thursday.user.name, user_lessons_path(thursday.user) %></p>
            <p><%= thursday.hour %></p>
            <p><%= link_to '수정', edit_schedule_path(thursday) %></p>
            <p><%= link_to '삭제', thursday, method: :delete, data: { confirm: 'Are you sure?' } %></p>
           <% end %>
+          </div>
         </div>
-        <div class="friday">
-          <p>금요일</p>
-          <% @monday.each do |friday| %>
+        <div class="weekday col-md-2 panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">금요일</h3>
+          </div>
+          <div class="panel-body">
+          <% @friday.each do |friday| %>
            <p><%= link_to friday.user.name, user_lessons_path(friday.user) %></p>
            <p><%= friday.hour %></p>
            <p><%= link_to '수정', edit_schedule_path(friday) %></p>
            <p><%= link_to '삭제', friday, method: :delete, data: { confirm: 'Are you sure?' } %></p>
           <% end %>
+          </div>
         </div>
-        <div class="saturday">
-          <p>토요일</p>
+        <div class="weekday col-md-2 panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title">토요일</h3>
+          </div>
+          <div class="panel-body">
           <% @saturday.each do |saturday| %>
            <p><%= link_to saturday.user.name, user_lessons_path(saturday.user) %></p>
            <p><%= saturday.hour %></p>
            <p><%= link_to '수정', edit_schedule_path(saturday) %></p>
            <p><%= link_to '삭제', saturday, method: :delete, data: { confirm: 'Are you sure?' } %></p>
           <% end %>
+          </div>
         </div>
     <br>
         <div class="bottom">
