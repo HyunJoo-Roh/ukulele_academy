@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+User.create(name:"건영님",  phone:"010-1010-1010", email:"dsd@ds.com")
+Schedule.create(day: "monday", hour: 1700, user_id: 1)
+Schedule.create(day: "tuesday", hour: 1700, user_id: 1)
+Schedule.create(day: "wednesday", hour: 1700, user_id: 1)
+Schedule.create(day: "thursday", hour: 1700, user_id: 1)
+Schedule.create(day: "friday", hour: 1700, user_id: 1)
+Schedule.create(day: "saturday", hour: 1700, user_id: 1)
+Schedule.create(day: "sunday", hour: 1700, user_id: 1)
+      
