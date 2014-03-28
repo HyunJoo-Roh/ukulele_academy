@@ -4,14 +4,13 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
   def index
-    monday = Schedule.where(:day => 'monday') 
-    tuesday = Schedule.where(:day => 'tuesday') 
-    wednesday = Schedule.where(:day => 'wednesday') 
-    thursday = Schedule.where(:day => 'thursday') 
-    friday = Schedule.where(:day => 'friday') 
-    saturday = Schedule.where(:day => 'saturday') 
+    @monday = Schedule.where(:day => 'monday') 
+    @tuesday = Schedule.where(:day => 'tuesday') 
+    @wednesday = Schedule.where(:day => 'wednesday') 
+    @thursday = Schedule.where(:day => 'thursday') 
+    @friday = Schedule.where(:day => 'friday') 
+    @saturday = Schedule.where(:day => 'saturday') 
     
-    @week = [monday,tuesday,wednesday,thursday,friday,saturday]
   end
 
   # GET /schedules/1
