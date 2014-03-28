@@ -1,0 +1,25 @@
+div
+{
+  padding: 10px 10px;
+}
+.monday{
+  float: left;
+}
+.tuesday{
+  float: left;
+}
+.wednesday{
+  float: left;
+}
+.thursday{
+  float: left;
+}
+.friday{
+  float: left;
+}
+.saturday{
+  float: left;
+}
+.bottom{
+  clear: both;
+}  
