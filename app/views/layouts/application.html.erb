@@ -9,23 +9,11 @@
 <body>
   <div class="row">
     <div class="col-md-3">
-        <ul>
-            <li>
-              <%= link_to schedules_path do %>
-                <i class="icon-chevron-right"></i>스케줄
-              <% end %>
-            </li>
-            <li>
-              <%= link_to users_path do %>
-                <i class="icon-chevron-right"></i>학생 현황
-              <% end %>
-            </li>
-            <li>
-              <%= link_to root_path do %>
-                <i class="icon-chevron-right"></i>사이트 바로가기(홈)
-              <% end %>
-            </li>
-        </ul>
+        <div class="list-group">
+              <%= link_to "스케줄", schedules_path, {class:"list-group-item"} %>
+              <%= link_to "학생현황", users_path, {class:"list-group-item"} %>
+              <%= link_to "사이트(홈)", root_path, {class:"list-group-item"} %>
+        </div>
     </div>
         <div class="col-md-9">
           <%= yield %>
