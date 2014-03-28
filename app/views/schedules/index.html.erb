@@ -11,11 +11,11 @@
   <tbody>
     <% @schedules.each do |schedule| %>
       <tr>
-        <td><%= schedule.day %></td>
+        <td><%= link_to schedule.day, edit_schedule_path(schedule) %></td>
         <td><%= schedule.hour %></td>
         <td><%= link_to schedule.user.name, user_lessons_path(schedule.user) %></td>
-        <td><%= link_to '수정', edit_schedule_path(schedule) %></td>
-        <td><%= link_to '삭제', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%#= link_to '수정', edit_schedule_path(schedule) %></td>
+        <td><%#= link_to '삭제', schedule, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

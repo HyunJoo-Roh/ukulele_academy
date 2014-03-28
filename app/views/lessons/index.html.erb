@@ -3,10 +3,10 @@
 <table>
   <thead>
     <tr>
-      <th>레슨 일자</th>
+      <th>수업일자</th>
       <th>차수</th>
       <th>목표</th>
-      <th>연습곡</th>
+      <th>곡명</th>
       <th>과제</th>
       <th colspan="3"></th>
     </tr>
@@ -15,13 +15,11 @@
   <tbody>
     <% @lessons.each do |lesson| %>
       <tr>
-        <td><%= lesson.lesson_date %></td>
-        <td><%= lesson.turn %></td>
-        <td><%= lesson.goal %></td>
-        <td><%= lesson.song %></td>
-        <td><%= lesson.homework %></td>
-        <td><%= link_to 'Show', user_lesson_path(@user, lesson) %></td>
-        <td><%= link_to 'Edit', edit_user_lesson_path(@user, lesson) %></td>
+          <td><%= link_to lesson.lesson_date, edit_user_lesson_path(@user, lesson) %></td>
+          <td><%= lesson.turn %></td>
+          <td><%= lesson.goal %></td>
+          <td><%= lesson.song %></td>
+          <td><%= lesson.homework %></td>
         <td><%= link_to 'Destroy', user_lesson_path(@user, lesson), method: :delete, data: { confirm: 'Are you sure?' }%></td>
       </tr>
     <% end %>

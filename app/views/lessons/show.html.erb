@@ -1,34 +1,34 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Lesson date:</strong>
+  <strong>수업 일자</strong>
   <%= @lesson.lesson_date %>
 </p>
 
 <p>
-  <strong>Turn:</strong>
+  <strong>차수</strong>
   <%= @lesson.turn %>
 </p>
 
 <p>
-  <strong>Goal:</strong>
+  <strong>목표</strong>
   <%= @lesson.goal %>
 </p>
 
 <p>
-  <strong>Song:</strong>
+  <strong>곡명</strong>
   <%= @lesson.song %>
 </p>
 
 <p>
-  <strong>Homework:</strong>
+  <strong>과제</strong>
   <%= @lesson.homework %>
 </p>
 
 <p>
-  <strong>User:</strong>
+  <strong>학생</strong>
   <%= @lesson.user %>
 </p>
 
-<%= link_to 'Edit', edit_user_lesson_path(@user, @lesson) %> |
-<%= link_to 'Back', user_lessons_path(@user) %>
+<%= link_to '수정하기', edit_user_lesson_path(@user, @lesson) %> |
+<%= link_to '뒤로가기', user_lessons_path(@user) %>
