@@ -10,7 +10,7 @@
     <% eval("@"+key).each do |monday| %>
     <div class="panel panel-info">
       <div class="panel panel-title">
-        <span ><%= monday.hour %></span>
+        <span ><%= monday.hour.to_s.insert(2,':') %></span>
         <%= link_to edit_schedule_path(monday) do %>
         <span class="glyphicon glyphicon-wrench"></span>
         <%end%>
