@@ -4,7 +4,7 @@ class SchedulesController < ApplicationController
   # GET /schedules
   # GET /schedules.json
   def index
-    @h = {"monday" => 1, "tuesday" => 2, "wednesday" => 3, "thursday" => 4, "friday" => 5, "saturday" => 6}
+    @h = {"monday" => "월요일", "tuesday" => "화요일", "wednesday" => "수요일", "thursday" => "목요일", "friday" => "금요일", "saturday" => "토요일"}
     @h.each {|key,value| eval "@#{key} = Schedule.where(day: '#{key}')"}
   end
 
