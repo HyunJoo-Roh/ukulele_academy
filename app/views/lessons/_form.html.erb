@@ -13,27 +13,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field col-xs-3">
     <%= f.label :lesson_date, '레슨 일자' %><br>
-    <%= f.datetime_select :lesson_date %>
+    <%= f.date_select :lesson_date, {}, {class: "form-control pull-left"}%>
   </div>
   <div class="field">
     <%= f.label :turn, '차수'%><br>
-    <%= f.number_field :turn %>
+    <%= f.number_field :turn, {class:"form-control", placeholder:"(ex) 3회차"}%>
   </div>
   <div class="field">
     <%= f.label :goal, '목표' %><br>
-    <%= f.text_area :goal %>
+    <%= f.text_area :goal, {class:"form-control", rows:"3"} %>
   </div>
   <div class="field">
     <%= f.label :song, '연습곡'%><br>
-    <%= f.text_field :song %>
+    <%= f.text_field :song, {class:"form-control", placeholder:"연습할 곡을 적어주세요."} %>
   </div>
   <div class="field">
     <%= f.label :homework, '과제'%><br>
-    <%= f.text_field :homework %>
+    <%= f.text_field :homework, {class:"form-control", placeholder:"과제를 적어주세요."} %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit("새 레슨 등록",{class: "btn btn-success pull-left"}) %>
   </div>
 <% end %>

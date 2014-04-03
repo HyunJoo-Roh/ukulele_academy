@@ -1,6 +1,4 @@
-<h1>
-  레슨 스케쥴 현황
-</h1>
+<h1>스케쥴</h1>
 <% @h.each do |key,value| %> 
 <div class="weekday col-md-2 panel-primary">
   <div class="panel-heading">
@@ -28,5 +26,5 @@
  <%end%>
 <br>
 <div class="bottom">
-  <%= link_to '새 일정 등록', new_schedule_path %>
+  <%= link_to '새 일정 등록', new_schedule_path, {class: "btn btn-success"} %>
 <div>

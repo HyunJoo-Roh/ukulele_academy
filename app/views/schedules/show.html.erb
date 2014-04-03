@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>일자</strong>
-  <%= @schedule.day %>
-</p>
 
-<p>
-  <strong>시간</strong>
-  <%= @schedule.hour %>
-</p>
+
+
+  <p><strong>일자</strong></p>
+  <p><%= @schedule.day %></p>
+  <p><strong>시간</strong></p>
+  <p><%= @schedule.hour %></p>
+
+
 
 <%= link_to '수정하기', edit_schedule_path(@schedule) %> |
 <%= link_to '뒤로가기', schedules_path %>

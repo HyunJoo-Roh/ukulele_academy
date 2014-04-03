@@ -34,7 +34,7 @@ class LessonsController < ApplicationController
 
     respond_to do |format|
       if @lesson.save
-        format.html { redirect_to user_lessons_path(@user), notice: 'Lesson was successfully created.' }
+        format.html { redirect_to user_lessons_path(@user), notice: '레슨이 등록되었습니다' }
         format.json { render action: 'show', status: :created, location: @lesson }
       else
         format.html { render action: 'new' }
@@ -46,9 +46,11 @@ class LessonsController < ApplicationController
   # PATCH/PUT /lessons/1
   # PATCH/PUT /lessons/1.json
   def update
+    @user = User.find(params[:user_id])
+   
     respond_to do |format|
       if @lesson.update(lesson_params)
-        format.html { redirect_to @lesson, notice: 'Lesson was successfully updated.' }
+        format.html { redirect_to user_lesson_path(@user, @lesson), notice: '레슨이 수정되었습니다' }
         format.json { render action: 'show', status: :ok, location: @lesson }
       else
         format.html { render action: 'edit' }

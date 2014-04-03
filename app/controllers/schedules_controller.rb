@@ -32,7 +32,7 @@ class SchedulesController < ApplicationController
     # @schedule.user = @user
     respond_to do |format|
       if @schedule.save
-        format.html { redirect_to @schedule, notice: 'Schedule was successfully created.' }
+        format.html { redirect_to @schedule, notice: '스케쥴이 등록되었습니다' }
         format.json { render action: 'show', status: :created, location: @schedule }
       else
         format.html { render action: 'new' }
@@ -46,7 +46,7 @@ class SchedulesController < ApplicationController
   def update
     respond_to do |format|
       if @schedule.update(schedule_params)
-        format.html { redirect_to @schedule, notice: 'Schedule was successfully updated.' }
+        format.html { redirect_to @schedule, notice: '스케쥴이 수정되었습니다' }
         format.json { render action: 'show', status: :ok, location: @schedule }
       else
         format.html { render action: 'edit' }

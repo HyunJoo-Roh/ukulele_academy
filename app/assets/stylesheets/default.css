@@ -1,17 +1,19 @@
 .weekday{ 
-   float: left;
+  float: left;
 }
 .bottom{
   clear: both;
 }
-
 .col-md-2{
-  
   padding-left: 2px;
   padding-right: 2px;
-  
 }  
-
 .panel-body{
   padding: 2px 2px;
+}
+.actions{
+  padding-top: 10px;
+}
+.back{
+  margin-left: 10px;
 }
